@@ -1,4 +1,4 @@
-import apdex from "./apdex";
+import apdex from './apdex';
 
 const api = {
   apdex: apdex(),

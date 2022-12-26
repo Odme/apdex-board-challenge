@@ -11,8 +11,7 @@
     "airbnb/hooks",
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:jest/recommended"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -25,8 +24,7 @@
   },
   "plugins": [
     "react",
-    "@typescript-eslint",
-    "jest"
+    "@typescript-eslint"
   ],
   "rules": {
     "react/jsx-filename-extension": [
