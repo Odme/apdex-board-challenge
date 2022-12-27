@@ -19,8 +19,9 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    scrollbar-color: ${({ theme }) => theme.colors.background[200]} transparent;
+    scrollbar-color: ${({ theme }) => theme.colors.background[900]} transparent;
     scrollbar-width: thin;
+    line-height: 1.2;
   }
 
   *::-webkit-scrollbar {
@@ -34,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.background[200]};
+    background-color: ${({ theme }) => theme.colors.background[900]};
     border-radius: ${({ theme }) => Math.floor(theme.scrollWidth / 2.0)}px;
   }
 `;

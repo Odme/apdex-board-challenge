@@ -1,20 +1,12 @@
 import {
   FC, ReactNode, useCallback, useMemo, useState,
 } from 'react';
-import { DataContext, initialContext, HostAppData } from '../context/dataContext';
+import { DataContext, initialContext } from '../context/dataContext';
 import { HostApp } from '../interfaces/hostApp';
 
 interface DataProviderProps {
   children: ReactNode;
 }
-
-export const stateReducer = (
-  prevState: HostAppData,
-  newState: Partial<HostAppData>,
-): HostAppData => ({
-  ...prevState,
-  ...newState,
-});
 
 const DataProvider: FC<DataProviderProps> = ({ children }) => {
   const [state, setState] = useState(initialContext);

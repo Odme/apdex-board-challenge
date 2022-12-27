@@ -15,6 +15,7 @@ interface Palette {
 declare module 'styled-components' {
   export interface DefaultTheme {
     scrollWidth: number;
+    borderRadius: number;
     spacing: (value: number) => string,
     colors: {
       foreground: Palette;

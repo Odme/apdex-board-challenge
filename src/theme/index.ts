@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 const defaultTheme: DefaultTheme = {
   scrollWidth: 5,
+  borderRadius: 5,
   spacing: (value: number) => `${2 * value}px`,
   colors: {
     background: {

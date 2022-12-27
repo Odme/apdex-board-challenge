@@ -1,4 +1,5 @@
-import AppTitle from './components/AppTitle';
+import AppTitle from './components/HeaderTitle';
+import HostList from './components/HostList';
 import Container from './components/shared/Container';
 import Content from './components/shared/Content';
 import Header from './components/shared/Header';
@@ -10,7 +11,9 @@ const App = () => (
       <Header>
         <AppTitle />
       </Header>
-      <Content />
+      <Content>
+        <HostList />
+      </Content>
     </Layout>
   </Container>
 );

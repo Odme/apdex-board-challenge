@@ -6,7 +6,7 @@ const Layout = styled.div`
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr;
   gap: ${({ theme }) => theme.spacing(15)};
-  height: 100%;
+  height: auto;
   padding: ${({ theme }) => theme.spacing(15)};
 `;
 

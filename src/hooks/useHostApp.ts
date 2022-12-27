@@ -17,8 +17,8 @@ const useHostApp = () => {
     hostApps.sort((a, b) => b.apdex - a.apdex)
   ), [hostApps]);
   // O(n^2)
-  const getTopAppsByHost = useCallback((hostname: string) => {
-    const appsByHosts = sortedApps.filter((app) => app.host.includes(hostname)).slice(0, 25);
+  const getTopAppsByHost = useCallback((hostname: string, slice = 25) => {
+    const appsByHosts = sortedApps.filter((app) => app.host.includes(hostname)).slice(0, slice);
     return appsByHosts;
   }, [sortedApps]);
   // O(n^2)

@@ -2,7 +2,7 @@ import Subtitle from './shared/Subtitle';
 import Title from './shared/Title';
 import ViewSwitcher from './ViewSwitcher';
 
-const AppTitle = () => (
+const HeaderTitle = () => (
   <>
     <div>
       <Title>Apps by Host</Title>
@@ -12,4 +12,4 @@ const AppTitle = () => (
   </>
 );
 
-export default AppTitle;
+export default HeaderTitle;
