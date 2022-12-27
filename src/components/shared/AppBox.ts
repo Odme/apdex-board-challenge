@@ -13,7 +13,7 @@ export const AppBox = styled.div`
 
   :hover {
     cursor: pointer;
-    transform: perspective(${({ theme }) => theme.spacing(5)}) translateZ(${({ theme }) => theme.spacing(0.5)});
+    transform: perspective(${({ theme }) => theme.spacing(10)}) translateZ(${({ theme }) => theme.spacing(0.5)});
   }
 
   & > ${AppText}:first-of-type {
