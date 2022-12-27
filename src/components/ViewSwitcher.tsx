@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { ChangeEventHandler, useState } from 'react';
+import { ChangeEventHandler } from 'react';
 import styled from 'styled-components';
+import useUi from '../hooks/useUi';
 
 const SwitcherWrapper = styled.form`
   & > input {
@@ -11,17 +12,18 @@ const SwitcherWrapper = styled.form`
 `;
 
 const ViewSwitcher = () => {
-  const [, setAsList] = useState(false);
+  const {
+    toggleViewMode, listMode, listModeLabel, gridModeLabel,
+  } = useUi();
 
-  const onChangeInputHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
-    const { checked } = event.target;
-    setAsList(checked);
+  const onChangeInputHandler: ChangeEventHandler<HTMLInputElement> = () => {
+    toggleViewMode();
   };
 
   return (
     <SwitcherWrapper>
       <input id="show" name="show" type="checkbox" onChange={onChangeInputHandler} />
-      <label htmlFor="show">Show as list</label>
+      <label htmlFor="show">{listMode ? listModeLabel : gridModeLabel}</label>
     </SwitcherWrapper>
   );
 };

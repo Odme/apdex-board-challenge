@@ -11,7 +11,7 @@ const UiProvider: FC<UiProviderProps> = ({ children }) => {
   const [state, setState] = useState(initialContext);
   // O(1)
   const toggleViewMode = useCallback(() => {
-    setState((curState) => ({ ...curState, listMode: !curState }));
+    setState((curState) => ({ ...curState, listMode: !curState.listMode }));
   }, []);
   // O(1)
   const value = useMemo(() => ({

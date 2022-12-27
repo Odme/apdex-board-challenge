@@ -6,7 +6,7 @@ const HeaderTitle = () => (
   <>
     <div>
       <Title>Apps by Host</Title>
-      <Subtitle>for user averylongemailadress@companyname.com</Subtitle>
+      <Subtitle>for user test@test.com</Subtitle>
     </div>
     <ViewSwitcher />
   </>
