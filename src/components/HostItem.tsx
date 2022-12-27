@@ -13,11 +13,16 @@ const HostItem: FC<HostItemProps> = ({ hostname }) => {
 
   const apps = useMemo(() => getTopAppsByHost(hostname, 5), [getTopAppsByHost, hostname]);
 
+  const onClickAppHandler = (name: string, version: number) => () => {
+    // eslint-disable-next-line no-alert
+    alert(`The release number of ${name} is: ${version}`);
+  };
+
   return (
     <HostBox>
       <HostTitle>{hostname}</HostTitle>
-      {apps.map(({ apdex, name }) => (
-        <AppBox key={`${apdex}-${name}`}>
+      {apps.map(({ apdex, name, version }) => (
+        <AppBox key={`${apdex}-${name}`} onClick={onClickAppHandler(name, version)}>
           <AppText>{apdex}</AppText>
           <AppText>{name}</AppText>
         </AppBox>
